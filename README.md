@@ -1,7 +1,11 @@
-# Dockerインストール済みのEC2を作成するTerraformコード
-## 使い方（Terraformはインストール済みの前提）
-1. terraform initを実行
-2. terraform applyを実行
+# Docker入りEC2を作成するTerraformコード
+## 前提
+- Terraformインストール済み
+- Terraformのバージョン：0.12.6
+
+## 使い方
+1. `terraform init` を実行
+2. `terraform apply` を実行
 ## 構成
 ### VPC
 - CIDRブロック：10.0.0.0/16
@@ -27,3 +31,4 @@
 - キーペア：以下で設定した公開鍵を設定
 - インスタンスタイプ：t2.micro
 - 起動時にdocker_install.shスクリプトを実行する
+- 同階層に配置してある公開鍵をキーペアとして設定
